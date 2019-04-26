@@ -5,6 +5,8 @@
 
 var webpackConfig = require('../../build/webpack.test.conf')
 
+process.env.CHROME_BIN = '/usr/bin/google-chrome'
+
 module.exports = function karmaConfig (config) {
   config.set({
     // to run in additional browsers:
@@ -13,7 +15,7 @@ module.exports = function karmaConfig (config) {
     // 2. add it to the `browsers` array below.
 
     //browsers: ['PhantomJS'],
-    //browsers: ['ChromeHeadless'],
+    browsers: ['Chrome'],
 
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     reporters: ['spec', 'coverage'],
