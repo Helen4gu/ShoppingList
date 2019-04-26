@@ -5,6 +5,8 @@
 
 var webpackConfig = require('../../build/webpack.test.conf')
 
+process.env.CHROME_BIN = require('puppeteer').executablePath()
+
 module.exports = function karmaConfig (config) {
   config.set({
     // to run in additional browsers:
@@ -13,7 +15,21 @@ module.exports = function karmaConfig (config) {
     // 2. add it to the `browsers` array below.
 
     //browsers: ['PhantomJS'],
-    browsers: ['Chrome'],
+    browsers: ['MyHeadlessChrome'],
+    customLaunchers: {
+      MyHeadlessChrome: {
+        base: 'ChromeHeadless',
+        /*flags: [
+          '--no-sandbox',
+          '--disable-gpu', 
+          '--remote-debugging-port=9222',
+          '--no-proxy-server',
+          '--use-mock-keychain',
+          '--disable-setuid-sandbox',
+          '--disable-web-security'
+        ]*/
+      }
+    },
 
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     reporters: ['spec', 'coverage'],
