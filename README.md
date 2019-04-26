@@ -1,7 +1,5 @@
 # shopping-list
 
-[![Build Status](https://travis-ci.org/Helen4gu/Pomodoro.svg?branch=master)](https://travis-ci.org/Helen4gu/Pomodoro)
-
 > Shopping list application
 
 ## Build Setup
