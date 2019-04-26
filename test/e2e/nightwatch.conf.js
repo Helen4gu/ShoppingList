@@ -31,10 +31,10 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
-        acceptSslCerts: true
-        //,"chromeOptions": {
-        //  binary:"D:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
-        //}
+        acceptSslCerts: true,
+        "chromeOptions": {
+          //binary:"D:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+        }
       }
     },
 
