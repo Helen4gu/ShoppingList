@@ -1,5 +1,7 @@
 # shopping-list
 
+[![Build Status](https://travis-ci.org/Helen4gu/ShoppingList.svg?branch=master)](https://travis-ci.org/Helen4gu/ShoppingList)
+
 > Shopping list application
 
 ## Build Setup
